@@ -18,3 +18,19 @@ def selectionsort(arr):
         
 c = [1,5,2,3,0]
 print('Final answer:',selectionsort(c))
+
+
+###########################################
+
+def ss(arr):
+    for i in range(len(arr)):
+        min_x=i
+        for itr in range(i+1,len(arr)):
+            if arr[itr]<arr[min_x]:
+                min_x=itr
+        arr[i],arr[min_x]=arr[min_x],arr[i]
+    return arr
+        
+        
+d = [1,5,2,3,0]
+print('Final answer:',ss(d))
